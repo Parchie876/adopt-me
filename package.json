@@ -1,0 +1,26 @@
+{
+  "name": "adopt-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier \"src/**/*.{js, html}\" --write",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parchie876/adopt-me.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Parchie876/adopt-me/issues"
+  },
+  "homepage": "https://github.com/Parchie876/adopt-me#readme",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "prettier": "^2.2.1"
+  }
+}
