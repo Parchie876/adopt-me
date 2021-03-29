@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
+    "dev: mock": "cross-env PET_MOCK=mock parcel src/index.html",
     "format": "prettier \"src/**/*.{js, html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,7 +21,11 @@
   },
   "homepage": "https://github.com/Parchie876/adopt-me#readme",
   "devDependencies": {
+    "@babel/core": "^7.13.13",
+    "@babel/preset-react": "^7.13.13",
     "babel-eslint": "^10.1.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^7.0.3",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
@@ -34,5 +39,6 @@
     "@frontendmasters/pet": "^1.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  }
+  },
+  "browserslist": ["last 2 Chrome versions"]
 }
