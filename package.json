@@ -40,6 +40,8 @@
   "dependencies": {
     "@agney/react-loading": "^0.1.2",
     "@frontendmasters/pet": "^1.0.3",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.57",
     "@reach/router": "^1.3.4",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
