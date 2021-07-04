@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { render } from 'react-dom';
-import SearchParams from './SearchParams';
 import { Router, Link } from '@reach/router';
-import Details from './Details';
 import ThemeContext from './ThemeContext';
+import Loader from './Loader';
+
+const Details = lazy(() => import('./Details'));
+const SearchParams = lazy(() => import('./SearchParams'));
 
 const App = () => {
   const themeHook = useState('darkblue'); //* Can also be a object
   return (
     <React.StrictMode>
       <ThemeContext.Provider value={themeHook}>
-        <div>
+        <Suspense fallback={<Loader />}>
           <header>
             <Link to="/" id="root">
               Adopt Me
@@ -20,7 +22,7 @@ const App = () => {
             <SearchParams path="/" />
             <Details path="/details/:id" />
           </Router>
-        </div>
+        </Suspense>
       </ThemeContext.Provider>
     </React.StrictMode>
   );
